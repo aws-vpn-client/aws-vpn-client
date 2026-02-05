@@ -1,5 +1,5 @@
 # Project status
-> :warning: **Project is migrated to the https://github.com/aws-vpn-client/aws-vpn-client. This repository will not be updated!
+> :warning: **Project is migrated** to the [aws-vpn-client/aws-vpn-client](https://github.com/aws-vpn-client/aws-vpn-client). This repository will not be updated!
  
 # aws-vpn-client
 
