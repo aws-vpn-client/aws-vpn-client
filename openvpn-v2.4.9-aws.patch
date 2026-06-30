@@ -25,7 +25,7 @@ index c510c005..d4712b11 100644
  #include "error.h"
  
 -#define BUF_SIZE_MAX 1000000
-+#define BUF_SIZE_MAX 1 << 21
++#define BUF_SIZE_MAX (1 << 21)
  
  /*
   * Define verify_align function, otherwise
@@ -38,7 +38,7 @@ index 0f732008..02f61152 100644
   * This parameter must be >= PUSH_BUNDLE_SIZE
   */
 -#define TLS_CHANNEL_BUF_SIZE 2048
-+#define TLS_CHANNEL_BUF_SIZE 1 << 18
++#define TLS_CHANNEL_BUF_SIZE (1 << 18)
  
  /*
   * This parameter controls the maximum size of a bundle
@@ -54,7 +54,7 @@ index eaedf172..782ba30c 100644
 +/*
 + * Increase the error buffer size to 256 KB.
 + */
-+#define ERR_BUF_SIZE 1 << 18
++#define ERR_BUF_SIZE (1 << 18)
  #endif
  
  struct gc_arena;
@@ -106,7 +106,7 @@ index 8a34f431..27852e81 100644
 +/*
 + * Increase the username and password length size to 128KB.
 + */
-+#define USER_PASS_LEN 1 << 17
++#define USER_PASS_LEN (1 << 17)
  #endif
      char username[USER_PASS_LEN];
      char password[USER_PASS_LEN];
