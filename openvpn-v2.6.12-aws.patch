@@ -7,7 +7,7 @@ index d988ef2..3760175 100644
  #include "error.h"
  
 -#define BUF_SIZE_MAX 1000000
-+#define BUF_SIZE_MAX 1 << 21
++#define BUF_SIZE_MAX (1 << 21)
  
  /*
   * Define verify_align function, otherwise
@@ -20,7 +20,7 @@ index 3a84541..61ee72e 100644
   * This parameter must be >= PUSH_BUNDLE_SIZE
   */
 -#define TLS_CHANNEL_BUF_SIZE 2048
-+#define TLS_CHANNEL_BUF_SIZE 1 << 18
++#define TLS_CHANNEL_BUF_SIZE (1 << 18)
  
  /* TLS control buffer minimum size
   *
@@ -36,7 +36,7 @@ index ab2872a..cb0c68e 100644
 +/*
 + * Increase the error buffer size to 256 KB.
 + */
-+#define ERR_BUF_SIZE 1 << 18
++#define ERR_BUF_SIZE (1 << 18)
  #endif
  
  struct gc_arena;
@@ -101,7 +101,7 @@ index 0dc0883..39e8373 100644
 +/*
 + * Increase the username and password length size to 128KB.
 + */
-+#define USER_PASS_LEN 1 << 17
++#define USER_PASS_LEN (1 << 17)
  #endif
      /* Note that username and password are expected to be null-terminated */
      char username[USER_PASS_LEN];
